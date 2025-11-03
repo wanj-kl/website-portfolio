@@ -1,0 +1,276 @@
+/* GLOBAL STYLING */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --light-gray: #dddddd;
+    --accent-color: #c9a785; 
+    
+    --font-heading: 'Times New Roman', Times, serif; 
+    --font-body: 'Arial', sans-serif; 
+}
+
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    padding: 0 5vw; 
+}
+
+/* General typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 300; 
+    text-transform: capitalize; 
+    letter-spacing: 0.05em; 
+    margin: 5rem 0;
+}
+
+/* Links and buttons */
+a {
+    color: var(--white);
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+p {
+    line-height: 1.6;
+    color: var(--light-gray);
+}
+
+/* Horizontal line separator style (for visual separation) */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 5rem 0;
+}
+/* --- NAVIGATION BAR STYLING --- */
+
+.main-nav {
+    /* Position the nav bar itself at the very top of the header */
+    width: 100%; 
+    padding: 0.5rem 0; 
+    position: absolute ; top: 50px ; left:800px; 
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: flex-start; 
+    
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-right: 50px; 
+}
+
+.main-nav a {
+    /* Style the actual text links */
+    color: var(--white); 
+    text-decoration: none; 
+    font-family: var(--font-body); 
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 5px; 
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color); 
+    border-bottom: 1px solid var(--accent-color);
+}
+/* --- WELCOME SECTION Layout Fix --- */
+.welcome-section {
+    display: flex; 
+    justify-content: space-between; 
+    
+    /* Set a height so the vertical alignment has room to work */
+    min-height: 80vh;
+    
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10rem 0 5rem 0; 
+}
+
+/* --- Positioning the Children --- */
+/* Content Container (Right side, Bottom aligned) */
+.content-container {
+    /* ALIGN TEXT TO THE BOTTOM */
+    align-self: flex-start; 
+    
+    /* ALIGN TEXT ITSELF TO THE RIGHT */
+    text-align: left; 
+    
+    padding-left: 2rem; 
+}
+
+/* Define widths to control the visual space */
+.image-container.profile-image,
+.content-container {
+    flex-basis: 45%; 
+}
+/* --- IMAGE STYLING (The Oval Effect) --- */
+.profile-image img {
+    
+    width: 300px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 200% / 150%; 
+}
+/* --- ABOUT SECTION LAYOUT (Side-by-Side) --- */
+.content-section {
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the image and text */
+    
+    max-width: 1200px;
+    margin: 10rem auto; /* Creates space above and below the section */
+    padding: 0 2rem;
+}
+
+/* Define the width split for a balanced look */
+.about-image-container {
+    flex-basis: 40%; /* Image takes 40% of the space */
+    text-align: left; /* Centers the image inside its container */
+}
+
+.about-text-content {
+    flex-basis: 55%; /* Text takes 55% of the space (5% gap between them) */
+    padding-left: 3rem; /* Add space for separation */
+}
+
+.about-text-content h2 {
+    font-size: 4rem;
+    margin-top: 0;
+}
+
+/* --- ABOUT PHOTO STYLING (The Oval Shape) --- */
+.about-image-container img {
+    width: 300px; 
+    height: 400px;
+    
+    object-fit: cover; 
+    
+    /* Apply the oval border-radius */
+    border-radius: 30% / 70%; 
+}
+
+/* --- RESPONSIVENESS (Stacking on Small Screens) --- */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; 
+        text-align: left; 
+    }
+
+    .about-text-content {
+        padding-left: 0;
+        order: 2; 
+    }
+
+    .about-image-container {
+        margin-bottom: 2rem;
+        order: 1; 
+    }
+}
+
+<!-- --- WORK SECTION STYLING --- */
+.work-grid {
+    display: grid;
+    /* Create three columns for the images */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3rem;
+    padding: 5rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.work-item {
+    text-align: center;
+}
+
+.work-item p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+/* --- CONTACT SECTION STYLING --- */
+
+.contact-section {
+    max-width: 1200px;
+    margin: 8rem auto; 
+    padding: 0 2rem;
+    text-align: center; 
+}
+
+.contact-section .section-title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+/* --- THE THREE-COLUMN GRID --- */
+.contact-grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3rem; 
+    text-align: left; 
+}
+
+.contact-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-item p {
+    margin: 0.5rem 0;
+}
+
+
+.contact-item a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--accent-color);
+}
+
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
+}
+
+.site-footer {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 5rem auto 2rem auto; 
+    padding: 2rem 0;
+    
+    text-align: center; 
+    
+
+    color: var(--light-gray); 
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    border-top: 1px solid rgb(213, 225, 228);
+}
+html, body {
+    /* 1. Prevents horizontal scrolling */
+    overflow-x: hidden; 
+}
