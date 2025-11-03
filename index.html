@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velma Khadija Kirubi - Web Design & Development Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="welcome-section">
+        <nav class="main-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
+        </ul>
+    </nav>
+    
+  <div class="image-container profile-image">
+    <img src="profile-image.jpg" alt="Your Name Profile">
+  </div>
+
+  <div class="content-container">
+    <h1>Welcome! To <br> My Design & Developer Portfolio</h1>
+    <a href="#contact" class="button">Get In Touch</a>
+  </div>
+
+</header>
+
+    
+
+    <section id="about" class="section about-section">
+        <div class="about-image-container">
+        <img src="about-image-coding.jpg.jpeg" alt="Velma Khadija Kirubi - About">
+    </div>
+        <div class="content-container">
+            <h2>Who is Velma Khadija Kirubi?</h2>
+            <p>I'm a Web Designer and Developer with a passion for building beautiful, responsive, and high-performance digital experiences. I specialize in the entire product lifecycle, from initial UX/UI design to full-stack implementation.</p>
+            <p>Let's build something amazing together.</p>
+        </div>
+       
+    </section>
+
+    
+
+    <section id="background" class="section background-section">
+        <h2>My Background & Skills</h2>
+        <div class="background-columns">
+            <div class="column">
+                <h3>Design Stack</h3>
+                <ul>
+                    <li>UI/UX: Figma, Sketch, Adobe XD</li>
+                    <li>Branding: Adobe Illustrator, Photoshop</li>
+                    <li>Prototyping: Wireframing, User Testing</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Development Stack</h3>
+                <ul>
+                    <li>Frontend: HTML5, CSS3, JavaScript (React/Vue)</li>
+                    <li>Backend: Node.js, Python (Django/Flask)</li>
+                    <li>Database/DevOps: MongoDB, PostgreSQL, Git</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="work" class="section work-section">
+        <h2>My Work</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <div class="image-container arch-mask">
+                    <img src="project-1-thumb.jpg" alt="E-commerce site thumbnail">
+                </div>
+                <h3>E-commerce Redesign</h3>
+                <p>A modern, mobile-first e-commerce solution built with React.</p>
+            </div>
+            <div class="project-item">
+                <div class="image-container arch-mask">
+                    <img src="project-2-thumb.jpg" alt="SaaS landing page thumbnail">
+                </div>
+                <h3>SaaS Landing Page</h3>
+                <p>Designed and developed a high-converting landing page.</p>
+            </div>
+            <div class="project-item">
+                <div class="image-container arch-mask">
+                    <img src="project-3-thumb.jpg" alt="Mobile app UI thumbnail">
+                </div>
+                <h3>Mobile App UI/UX</h3>
+                <p>Complete design system for a new social media application.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+    
+    <h2 class="section-title">Reach Out to Me</h2>
+    
+    <div class="contact-grid">
+        
+        <div class="contact-item">
+            <h3>Address</h3>
+            <p>Nairobi,Kenya</p>
+        </div>
+        
+        <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:vk.kirubi@gmail.com">vk.kirubi@gmail.com</a></p>
+            <p>Send me a message anytime!</p>
+        </div>
+        
+        <div class="contact-item">
+            <h3>LinkedIn</h3>
+            <p><a href="#" target="_blank">www.linkedin.com/in/Velma Kirubi</a></p>
+            <p>Connect with me professionally.</p>
+        </div>
+        
+    </div>
+</section>
+<footer class="site-footer">
+        <p>
+            &copy; <span id="current year"></span> Linet Wanjiku (E156/1338/2024) | . All Rights Reserved.
+        </p>
+    </footer>
+<script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Insert the current year into the span element
+        document.getElementById('current-year').textContent = currentYear;
+    </script>
+</body>
+</html>
